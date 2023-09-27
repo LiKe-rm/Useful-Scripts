@@ -44,10 +44,10 @@ print("Begining!")
 start = time.time()
 driver.execute_script("window.location.reload()")   # 刷新网页
 elmet = driver.find_elements(By.XPATH,"//textarea[@placeholder='请输入']")
-# elmet[0].send_keys("11")
-# elmet[1].send_keys("22")
-# elmet[2].send_keys("33")
-# elmet[3].send_keys("44")
+elmet[0].send_keys("11")   # 输入需要填写的信息：姓名、联系方式...
+elmet[1].send_keys("22")
+elmet[2].send_keys("33")
+elmet[3].send_keys("44")
 
 # 由于不同的网页收集表提交和确认按钮似乎会变化，不推荐使用css_selector选择
 # button = driver.find_element(By.CSS_SELECTOR,'#root > div.form-root.fill-form-root > div > div > div.form-fill-container > div.form-with-history-record.fill-area > div.form-body.form-fill-body > div.question-commit > button')

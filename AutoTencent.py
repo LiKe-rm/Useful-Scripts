@@ -11,8 +11,9 @@ driver = webdriver.Chrome(options=options)
 # driver = webdriver.Edge()
 # 使用EdgeOptions初始化EdgeDriver
 
-driver.get("https://docs.qq.com/form/page/DVUF0amFoWlRnZE1Z")
-# driver.get("https://docs.qq.com/form/page/DZHJ6V3pZb3h3Y1VG")
+url = "https//docs.qq.com/form/page/..."     #在线收集表的url地址
+driver.get(url)
+
 
 # 打开网址
 # time.sleep(1)
@@ -20,22 +21,19 @@ content=''
 elmet = driver.find_element(By.ID,"header-login-btn")
 elmet.click()
 driver.implicitly_wait(2)
-# time.sleep(5)
 # driver.execute_script("window.location.reload()")
 elmet=driver.find_element(By.CSS_SELECTOR,'span.qq')
 elmet.click()
-# time.sleep(5)
-# driver.switch_to.frame("login_frame")
-while True:
+while True:    # 等待通过手机扫码或者其他方式登录，之后输入y即可开始等待开始抢填
     ch = input("Are you logined ok?(y/n)")
     if(ch == 'y'):
         break
-# elmet = driver.find_element(By.ID,"img_out_1984141285")
+# elmet = driver.find_element(By.ID,"img_out_qqnum")
 # elmet.click()
 # print("快捷登录成功")
 # time.sleep(1)
 
-# 设定执行时间2023年9月20日14点
+# 设定执行时间2023年9月20日18点
 execute_time = datetime.datetime(2023, 9, 25, 18, 0, 0)
 
 # 等待到指定时间再执行
@@ -50,12 +48,8 @@ elmet = driver.find_elements(By.XPATH,"//textarea[@placeholder='请输入']")
 # elmet[1].send_keys("22")
 # elmet[2].send_keys("33")
 # elmet[3].send_keys("44")
-elmet[0].send_keys("孙京格")
-elmet[1].send_keys("食硕2302")
-elmet[2].send_keys("6230112076")
-elmet[3].send_keys("18822758926")
 
-#由于不同的网页收集表提交和确认按钮会动态变化，不推荐使用css_selector选择
+# 由于不同的网页收集表提交和确认按钮似乎会变化，不推荐使用css_selector选择
 # button = driver.find_element(By.CSS_SELECTOR,'#root > div.form-root.fill-form-root > div > div > div.form-fill-container > div.form-with-history-record.fill-area > div.form-body.form-fill-body > div.question-commit > button')
 # driver.execute_script("arguments[0].click();", button)
 # elmet.click()

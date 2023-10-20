@@ -69,7 +69,7 @@ elements[3].send_keys("44")
 # button = driver.find_element(By.CSS_SELECTOR,'body > div.dui-modal-mask.dui-modal-mask-visible.dui-modal-mask-display > div > div.dui-modal-footer > button.dui-button.dui-modal-footer-ok.dui-button-type-primary.dui-button-size-default > div')
 # button.click()
 # elmet = driver.find_element(By.CSS_SELECTOR,'textarea[placeholder="请输入"]')
-# elmet.send_keys("15623738228")
+# elmet.send_keys("1562320xxxx")
 # textareas = driver.find_elements_by_css_selector('textarea[placeholder="请输入"]')
 
 button = driver.find_element(By.XPATH,"//button[text()='提交']")
